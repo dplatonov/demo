@@ -12,8 +12,8 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public class GenericService<T> {
 
-  private final Class<T> entityClass;
-  private final GenericDao<T> dao;
+  private Class<T> entityClass;
+  private GenericDao<T> dao;
 
   public GenericService(Class<T> entityClass, GenericDao<T> dao) {
     this.entityClass = entityClass;
@@ -32,11 +32,11 @@ public class GenericService<T> {
     return dao.save(t);
   }
 
-  public void delete(Long id, T t) {
+  public void delete(Long id) {
     if (BaseEntity.class.isAssignableFrom(entityClass)) {
       dao.deleteBaseEntity(id);
     } else {
-      dao.delete(t);
+      dao.delete(findById(id));
     }
   }
 }
