@@ -147,6 +147,6 @@ Body for create new user:
 `http://localhost:8080/api/user/{id}` `DELETE` request should delete user by id
 
 
-## The magic andpoint 
+## The magic endpoint
 
 `http://localhost:8080/api/user/show/my/the/magic` `GET` request should return a list of users by SpringData magic :)
