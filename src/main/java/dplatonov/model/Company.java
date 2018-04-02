@@ -54,4 +54,13 @@ public class Company extends BaseEntity implements Serializable {
   public void setUsers(Set<User> users) {
     this.users = users;
   }
+
+  @Override
+  public String toString() {
+    return "Company{" +
+        "id=" + id +
+        ", name='" + name + '\'' +
+        ", users=" + users +
+        '}';
+  }
 }

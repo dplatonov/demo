@@ -62,20 +62,19 @@
       <artifactId>spring-boot-starter-test</artifactId>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-collections4</artifactId>
+      <version>4.1</version>
+    </dependency>
   </dependencies>
 
   <profiles>
-    <profile>
-      <id>Postgres</id>
-      <properties>
-        <datasource.driverClassName>org.postgresql.Driver</datasource.driverClassName>
-        <datasource.url>jdbc:postgresql://localhost:32770/postgres</datasource.url>
-        <datasource.username>postgres</datasource.username>
-        <datasource.password>docker</datasource.password>
-        <project.stage>development</project.stage>
-        <hibernate.globallyQuotedIdentifiers>false</hibernate.globallyQuotedIdentifiers>
-      </properties>
-    </profile>
     <profile>
       <id>formatter</id>
       <build>

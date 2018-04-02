@@ -10,6 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 @Transactional
 public class UserService extends GenericService<User> {
+
   private final UserDao dao;
 
   @Autowired

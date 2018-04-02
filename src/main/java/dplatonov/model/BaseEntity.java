@@ -60,4 +60,14 @@ public class BaseEntity implements Serializable {
   public void setEnabled(Boolean enabled) {
     this.enabled = enabled;
   }
+
+  @Override
+  public String toString() {
+    return "BaseEntity{" +
+        "createDate=" + createDate +
+        ", lastUpdate=" + lastUpdate +
+        ", deleted=" + deleted +
+        ", enabled=" + enabled +
+        '}';
+  }
 }

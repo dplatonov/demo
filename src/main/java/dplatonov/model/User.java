@@ -70,17 +70,11 @@ public class User extends BaseEntity implements Serializable {
 
   @Override
   public String toString() {
-    return "User{"
-        + "id="
-        + id
-        + ", name='"
-        + name
-        + '\''
-        + ", lastName='"
-        + lastName
-        + '\''
-        + ", company="
-        + company
-        + '}';
+    return "User{" +
+        "id=" + id +
+        ", name='" + name + '\'' +
+        ", lastName='" + lastName + '\'' +
+        ", company=" + company +
+        '}';
   }
 }
